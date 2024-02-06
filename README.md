@@ -1,11 +1,11 @@
-# Duel Double DQN-Pytorch
-This is a **clean and robust Pytorch implementation of Duel Double DQN**. A quick render here:
+# NoisyNet DQN-Pytorch
+This is a **clean and robust Pytorch implementation of NoisyNet DQN**. A quick render here:
 
 
 <img src="https://github.com/XinJingHao/DQN-DDQN-Pytorch/blob/main/IMGs/Render_CVP1.gif" width="90%" height="auto">  | <img src="https://github.com/XinJingHao/DQN-DDQN-Pytorch/blob/main/IMGs/Render%20of%20DDQN.gif" width="90%" height="auto">
 :-----------------------:|:-----------------------:|
 
-<img src="https://github.com/XinJingHao/DQN-DDQN-Pytorch/blob/main/IMGs/cp_all.png" width="90%" height="auto">  | <img src="https://github.com/XinJingHao/DQN-DDQN-Pytorch/blob/main/IMGs/lld_all.png" width="90%" height="auto">
+<img src="https://github.com/XinJingHao/NoisyNet-DQN-Pytorch/blob/main/IMGs/cpv1.png" width="90%" height="auto">  | <img src="https://github.com/XinJingHao/NoisyNet-DQN-Pytorch/blob/main/IMGs/lldv2.png" width="90%" height="auto">
 :-----------------------:|:-----------------------:|
 
 
@@ -25,21 +25,7 @@ python==3.11.5
 ## How to use my code
 ### Train from scratch:
 ```bash
-python main.py # Train Duel Double DQN on CartPole-v1 from scratch
-```
-
-### Change Algorithm:
-You can disable the **Duel networks** or the **Double Q-learning** via:
-```bash
-python main.py --Duel False # Train Double DQN on CartPole-v1 from scratch
-```
-
-```bash
-python main.py --Double False # Train Duel DQN on CartPole-v1 from scratch
-```
-
-```bash
-python main.py --Duel False --Double False # Train DQN on CartPole-v1 from scratch
+python main.py # Train NoisyNet DQN on CartPole-v1 from scratch
 ```
 
 ### Change Enviroment:
@@ -59,10 +45,10 @@ pip install gymnasium[box2d]
 
 ### Play with trained model:
 ```bash
-python main.py --EnvIdex 0 --render True --Loadmodel True --ModelIdex 100 # Play CartPole-v1 with Duel Double DQN
+python main.py --EnvIdex 0 --render True --Loadmodel True --ModelIdex 100 # Play CartPole-v1 with NoisyNet DQN
 ```
 ```bash
-python main.py --EnvIdex 1 --render True --Loadmodel True --ModelIdex 400 # Play LunarLander-v2 with Duel Double DQN
+python main.py --EnvIdex 1 --render True --Loadmodel True --ModelIdex 550 # Play LunarLander-v2 with NoisyNet DQN
 ```
 
 ### Visualize the training curve
@@ -90,4 +76,4 @@ For more details of Hyperparameter Setting, please check 'main.py'
 ### References
 DQN: Mnih V , Kavukcuoglu K , Silver D , et al. Playing Atari with Deep Reinforcement Learning[J]. Computer Science, 2013. 
 
-Double DQN: Hasselt H V , Guez A , Silver D . Deep Reinforcement Learning with Double Q-learning[J]. Computer ence, 2015.
+NoisyNet DQN: Fortunato M, Azar M G, Piot B, et al. Noisy networks for exploration[J]. arXiv preprint arXiv:1706.10295, 2017.
